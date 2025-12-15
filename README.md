@@ -258,3 +258,25 @@ The project includes basic testing capabilities:
 # Test bot ship generation
 python -m src.bot_generation
 ```
+
+
+## Git Workflow
+
+This project follows a feature branch workflow:
+
+1. Main development on `main` branch
+2. Feature work on `feature/bot_ai` branch
+3. Merge feature branch back to main after completion
+
+```bash
+# Create feature branch
+git checkout -b feature/bot_ai
+
+# Work on bot AI features
+git add src/bot_generation.py src/gameplay.py
+git commit -m "Implement intelligent bot AI"
+
+# Merge to main
+git checkout main
+git merge feature/bot_ai
+```
