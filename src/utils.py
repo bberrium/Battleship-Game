@@ -32,7 +32,7 @@ def ships_touch(ship_cells: Set[Tuple[int, int]], all_ships: List[Set[Tuple[int,
                     return True
     return False
 
-def save_ships_to_csv(ships: List[List[Tuple[int, int]]], filename: str):
+def save_ships_to_csv(ships: List[List[Tuple[int, int]]], filename: str): # Tuple[int, int] - (row, col)
     """Save ship positions to CSV"""
     with open(filename, 'w', newline='') as f:
         writer = csv.writer(f)
@@ -45,7 +45,7 @@ def load_ships_from_csv(filename: str) -> List[Set[Tuple[int, int]]]:
     """Load ship positions from CSV"""
     ships = {}
     with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
+        reader = csv.DictReader(f) #returns each row as a dictionary
         for row in reader:
             ship_id = int(row['ship_id'])
             if ship_id not in ships:

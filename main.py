@@ -1,4 +1,7 @@
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.ship_input import get_player_ships
 from src.bot_generation import generate_bot_ships

@@ -1,6 +1,5 @@
-# src/ship_input.py
 from typing import List, Tuple, Set
-from utils import *
+from src.utils import *
 
 def parse_ship_input(input_str: str) -> List[Tuple[int, int]]:
     """Parse ship coordinates from input like 'A1 A2 A3 A4'"""
@@ -47,7 +46,6 @@ def validate_ship_shape(coords: List[Tuple[int, int]], expected_size: int) -> bo
 
 def display_placement_board(placed_ships: List[List[Tuple[int, int]]]):
     """Display current ship placements"""
-    print("\nDEBUG: Entering display_placement_board")
     board = [['~' for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
     
     for ship_id, ship in enumerate(placed_ships):
